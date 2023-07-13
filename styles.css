@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Josefin Sans', sans-serif;
+	overflow-x: hidden;
+	transition: ease 0.5s;
+}
+
+body {
+	background-color: #eee;
+	color: hsl(235, 19%, 35%);
+}
+
+.background {
+	z-index: 1;
+	background-image: url('./images/bg-desktop-light.jpg');
+	min-height: 35vh;
+	width: 100vw;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+}
+
+#header, #task-list, #task-list__manage-tasks, #footer {
+	position: relative;
+	z-index: 2;
+}
+
+.header__moon:hover, .header__sun:hover {
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+.header-elements{
+	min-height: 80px;
+	width: 85vw;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+}
+
+.check-circle, .checkCircle-unchecked {
+	height: 25px;
+	width: 25px;
+	background-color: #fff;
+	margin: auto 1rem;
+	overflow-y: hidden;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.checkCircle-unchecked {
+	margin-left: -0.001rem;
+}
+
+.check-circle__img /*.checkCircle-unchecked*/ {
+	width:  25px;
+	height: 25px;
+	z-index: 1;
+}
+.check-circle__img:hover, .check-circle:hover, .checkCircle-unchecked:hover {
+	cursor: pointer;
+	transition: ease 0.5s;
+	background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.remove-cross:hover {
+	cursor: pointer;
+	transform: scaleX(1.1);
+	transform: scaleX(1.1);
+	transition: ease-in-out 0.5s;
+}
+
+.header__input{
+	background-color: #fff;
+	min-height: 50px;
+	width: 85vw;
+	margin: 1rem auto;
+	display: flex;
+	align-items: center;
+	border-radius: 6px;
+}
+
+#input {
+	min-height: 50px;
+	width: 100%;
+	border: none;
+	border-radius: 6px;
+}
+
+#task-list {
+	background-color: #fff;
+	min-height: 200px;
+	width: 85vw;
+	margin: 1rem auto;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header__input, #task-list, .task-list__manage-tasks {
+	box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.task-list__list {
+	margin-bottom: 0;
+}
+
+li {
+	min-height: 45px;
+	width: 85vw;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #eee;
+}
+
+#task-content-container {
+	display: grid;
+	min-height: 45px;
+	width: 85vw;
+	grid-template-columns: 3.5rem 1fr 3.5rem;
+	grid-template-rows: 45px;
+	grid-gap: 0px;
+	align-items: center;
+	margin-left: 1rem;
+}
+
+#textValue {
+	margin-left: -1rem;
+	/* max-width: 3rem; */
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.remove-cross {
+	margin-left: 1rem;
+}
+
+.task-list__list{
+	margin-bottom: 45px;
+}
+
+.task-list__last {
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	position: relative;
+	border-top: 1px solid #ddd;
+}
+
+.task-list__manage-tasks {
+	background-color: #fff;
+	min-height: 50px;
+	width: 85vw;
+	border-radius: 6px;
+	margin: 1rem auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.task-list__last-item:hover, .manage-tasks__item:hover {
+	transition: ease 0.5s;
+	color: hsl(220, 98%, 61%);
+	cursor: pointer;
+}
+
+footer {
+	margin: 3rem auto;
+	min-height: 50px;
+	width: 85vw;
+	text-align: center;
+}
+
+footer, .task-list__manage-tasks, .task-list__last {
+	color: hsl(236, 9%, 61%);
+}	
+
+.colorNocturnoElementos {
+	background-color: hsl(235, 24%, 19%);
+}
+
+@media screen {
+	.colorNocturnoElementos #input {
+		color: #fff;
+	}
+	.colorNocturnoElementos #task-list {
+		background-color: hsl(235, 24%, 19%); 
+	}
+	.colorNocturnoElementos li {	
+		border-bottom: 1px solid hsl(237, 14%, 26%);
+	}
+	.colorNocturnoElementos #textValue {
+		color: hsl(234, 39%, 85%);
+	}
+	.colorNocturnoElementos .tachado {
+    color: #1FEB78;
+  }
+}
+
+.colorNocturnoBody {
+	background-color: hsl(235, 21%, 11%);
+}
+
+.tachado {
+	text-decoration: line-through;
+	color: #1FEB78;
+	transition: ease 0.5s;
+}
+
+@media (min-width: 600px){
+	.header-elements, .header__input, #task-list, .task-list__last, .task-list__manage-tasks, #task-content-containter {
+		width: 55vw;
+		transition: ease 0.5s;
+	}
+	.remove-cross {
+		margin-left: 0.5rem;
+	}
+	.task-list__last {
+		margin: 0 0.2rem 0 -2.1rem;
+	}
+	#task-content-container{
+		width: 55vw;
+		transition: ease 0.5s;
+	}
+}

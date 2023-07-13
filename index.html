@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Todo app</title>
+
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <!-- header -->
+  <div id="header">
+    
+    <div class="header-elements">
+      <h1 class="header__title">T O D O</h1>
+      <img class="header__moon" src="./images/icon-moon.svg" alt="icon dark mode">
+      <img src="./images/icon-sun.svg" alt="icon light mode" class="header__sun hidden">
+    </div>
+    
+    <div class="header__input">
+      <div class="check-circle input">
+        <img class="check-circle__img" src="./images/icon-check.svg" alt="transparent circle">
+      </div>
+      <input type="text" name="input" id="input" placeholder="Create a new todo...">
+    </div>
+  </div>
+
+  <!-- cuerpo -->
+  <div id="task-list">
+    <div class="task-list__item1">
+      <ul class="task-list__list">
+      </ul>
+    </div>
+    <div class="task-list__last">
+      <p class="task-list__last-item itemsLeft">items left</p>
+      <p class="task-list__last-item clear">Clear Completed</p>
+    </div>
+  </div>
+  <div class="task-list__manage-tasks">
+    <p class="manage-tasks__item all">All</p>
+    <p class="manage-tasks__item activeSelector">Active</p>
+    <p class="manage-tasks__item completedSelector">Completed</p>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-item">Drag and drop to reorder list</div>
+  </footer>
+
+  <!-- Todo
+
+  Add dynamic number --> <!-- items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+ -->
+  <!-- Drag and drop to reorder list
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> --> 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
